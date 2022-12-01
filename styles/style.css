@@ -3,8 +3,7 @@
 @import url(./reset.css);  /* 이 순서를 유지야함 */
 /* 기본 스타일 */
 * {
-  box-sizing: border-box;
-  
+  box-sizing: border-box; 
 }
 /* 본문 스타일 */
 body {
@@ -34,10 +33,10 @@ body {
   background: lightgreen;
   display: flow-root; 
   /* flow-root:  */
-  padding: 0 15px;
+  padding: 0 10px;
   /* overflow: hidden; */
-  /* overflow: 자식내용이 넘처흐르는 현상, hidden: 넘친것을 안보이게 하는 명령어 */
-  /* BFC가 뭐야?? */
+  /* overflow: 자식내용이 넘처흐르는 현상, hidden: 넘친것을 안보이게 하는 명령어, auto: 네이게이션바 생성 */
+  /* BFC가 뭐야?? 레이아웃 안에 미니 레이아읏을 말한다. BCF로 명시하는 것은 높이를 부여하는 것 */
 }
 
 .main::after {
@@ -45,6 +44,7 @@ body {
   clear: both;
   /* clear는 float에 겹치지 않으려 하는 것 */
   display: block; /* 그래서 인라인 요소를 박스모델로 바꿔주는 명렁어가 block */
+  padding: 0 15px;
 }
 /* before, after 선택자: 백그라운드 이미지임 -> 홈페이지에서 cmd+A눌러도 선택이 안된다!
 
@@ -59,21 +59,20 @@ body {
 
 */
 .group {
+  margin: 0 15px;
   float: left;
-  padding: 0 15px;
 }
 .group1 {
   background-color: violet;  
   width: 250px;
-  
 }
 .group2 {
   background-color: coral;
-  width: 300px;
+  width: 380px;
 }
 .group3 {
   background-color: gold;
-  width: 100px;
+  width: 190px;
 }
 .clearfix {
   clear: both;
