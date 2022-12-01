@@ -9,11 +9,10 @@ body {
 }
 
 /* 레이아웃 - 셀렉터 그룹핑 */
-.header, .visual, .main, .slogan, .footer, .footer-inner {
+.header, .visual, .main, .slogan, .footer-inner {
   width: 940px;
   box-sizing: border-box;
   margin: 0 auto;
-  
 }
 /* 헤더 */
 .header {
