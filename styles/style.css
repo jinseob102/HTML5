@@ -1,13 +1,13 @@
 
 @import url(./normalize.css);  /* 노멀라이즈는 가장 먼저 선언해야함 */
-@import url(./reset.css);  /* 이 순서를 유지야함 */
+@import url(./reset.css); /* 이 순서를 유지야함 */
 /* 기본 스타일 */
 * {
   box-sizing: border-box; 
 }
 /* 본문 스타일 */
 body {
-  background: purple;
+  background: #ccc;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 100; /* 3. 글자 가져올땐 “해당”, ~, ~, ~, 마지막은 sans-serif; → 해야지 깔끔하게 글자를 처리할 수 있음 */
 }
@@ -19,9 +19,22 @@ body {
 }
 /* 헤더 */
 .header {
-  background: pink;
+  background: #fff;
   padding: 0 30px; /* padding: 위/아래 좌/우 */
   height: 15vh;
+  border-radius: 0 0 15px 15px;
+  position: relative;
+}
+/* 로고 */
+.logo {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+}
+/* 텍스트 링크 모음 */
+
+.member {
+  background-color: ;
 }
 /* 비주얼 */
 .visual {
