@@ -9,7 +9,8 @@
 body {
   background: purple;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font-weight: 100; /* 3. 글자 가져올땐 “해당”, ~, ~, ~, 마지막은 sans-serif; → 해야지 깔끔하게 글자를 처리할 수 있음 */
+  font-weight: 100; 
+  /* 3. 글자 가져올땐 “해당”, ~, ~, ~, 마지막은 sans-serif; → 해야지 깔끔하게 글자를 처리할 수 있음 */
 }
 
 /* 레이아웃 - 셀렉터 그룹핑 */
@@ -31,21 +32,16 @@ body {
 /* 메인 */
 .main {
   background: lightgreen;
-  display: flow-root; 
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
   /* flow-root:  */
-  padding: 0 10px;
   /* overflow: hidden; */
   /* overflow: 자식내용이 넘처흐르는 현상, hidden: 넘친것을 안보이게 하는 명령어, auto: 네이게이션바 생성 */
   /* BFC가 뭐야?? 레이아웃 안에 미니 레이아읏을 말한다. BCF로 명시하는 것은 높이를 부여하는 것 */
 }
 
-.main::after {
-  content: "";
-  clear: both;
-  /* clear는 float에 겹치지 않으려 하는 것 */
-  display: block; /* 그래서 인라인 요소를 박스모델로 바꿔주는 명렁어가 block */
-  padding: 0 15px;
-}
+
 /* before, after 선택자: 백그라운드 이미지임 -> 홈페이지에서 cmd+A눌러도 선택이 안된다!
 
 .main::before {
@@ -58,10 +54,6 @@ body {
 }
 
 */
-.group {
-  margin: 0 15px;
-  float: left;
-}
 .group1 {
   background-color: violet;  
   width: 250px;
