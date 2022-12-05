@@ -48,7 +48,7 @@ body {
 }
 .member li{
   background-color: pink;
-  display: inline-block;
+  display: inline;
   font-size: 16px;
 }
 .member a{
