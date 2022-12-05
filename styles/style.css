@@ -1,8 +1,12 @@
 
 @import url(./normalize.css);  /* 노멀라이즈는 가장 먼저 선언해야함 */
 @import url(./reset.css);  /* 이 순서를 유지야함 */
+@import url(./fontello.css);
+
 /* 기본 스타일 */
-* {
+*,
+* ::before,
+* ::after{
   box-sizing: border-box; 
 }
 /* 본문 스타일 */
@@ -20,10 +24,24 @@ body {
 }
 /* 헤더 */
 .header {
-  background: pink;
+  background: #fff;
   padding: 0 30px; /* padding: 위/아래 좌/우 */
   height: 15vh;
+  border-radius: 0 0 15px 15px;
 }
+/* 멤버 */
+.member {
+  background-color: pink;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+/*
+.member li:nth-child(n+2)::before {
+  background-color: skyblue;
+  content: ":";
+}*/
+
 /* 비주얼 */
 .visual {
   background: orange;
