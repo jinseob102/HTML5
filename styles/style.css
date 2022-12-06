@@ -4,8 +4,14 @@
 /* 숨긴 콘텐츠 */
 .a11y-hidden {
   background-color: yellow;
-  position: absolute;
-  top: -10px
+  position: absolute; /* inline-block으로 해도 된다 */
+  width: 1px; /* 0값을 주면 안되는 이유? 크기가 없는 개체는 포커싱이 안됨(스크린리더가 못읽음)*/
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+  /* opacity: 0도 모바일에서 못읽는 이슈가 있다. */
+  /* color: transparent도 스크린리더가 못 읽는다*/
 }
 /* 기본 스타일 */
 *,
