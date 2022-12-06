@@ -1,8 +1,16 @@
 
 @import url(./normalize.css);  /* 노멀라이즈는 가장 먼저 선언해야함 */
 @import url(./reset.css); /* 이 순서를 유지야함 */
+/* 숨긴 콘텐츠 */
+.a11y-hidden {
+  background-color: yellow;
+  position: absolute;
+  top: -10px
+}
 /* 기본 스타일 */
-* {
+*,
+*::before
+*::after {
   box-sizing: border-box; 
 }
 
