@@ -34,7 +34,7 @@ a {
 body {
   font-size: 1.4rem;
   color: #222;
-  background: #ccc;
+  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 60%, #fff 100%);
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   /* 3. 글자 가져올땐 “해당”, ~, ~, ~, 마지막은 sans-serif; → 해야지 깔끔하게 글자를 처리할 수 있음 */
 }
@@ -86,13 +86,18 @@ body {
 .divider {
   margin-right: 4px;
 }
+.navigation{
+  padding-bottom: 80px;
+}
 .menu {
   background-color: orangered;
-  background-image: linear-gradient(      to bottom,
-  #ef9126 0%,
-  #e85e2c 35%,
-  #e85e2c 70%,
-  #ef9126 100%);
+  /* 그라디언트 주는 방법 */
+  background-image: linear-gradient(      
+    to bottom,
+    #ef9126 0%,
+    #e85e2c 35%,
+    #e85e2c 70%,
+    #ef9126 100%);
 }
 /* 비주얼 */
 .visual {
@@ -148,7 +153,8 @@ body {
 }
 /* 푸터 */
 .footer {
-  background: gray;
+  background: gray 
+    linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 60%, #fff 100%);
 }
 .footer-inner {
   background: lightgray;
