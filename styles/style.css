@@ -1,6 +1,7 @@
 
 @import url(./normalize.css);  /* 노멀라이즈는 가장 먼저 선언해야함 */
 @import url(./reset.css); /* 이 순서를 유지야함 */
+@import url(./fonts.css);
 /* 숨긴 콘텐츠 */
 .a11y-hidden {
   background-color: yellow;
@@ -85,7 +86,7 @@ body {
   margin-right: 4px;
 }
 .navigation{
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 .menu {
   border-top: 2px solid #212121;
@@ -142,11 +143,11 @@ body {
   border-top: 2px solid #000;
 }
 .sub-menu {
-  background-color: pink;
   position: absolute; 
   /* 배치를 하기 위해서 position으로 사용 */ 
   display: none;
   /* 메뉴아이템 정렬을 깔끔하게 하기 위해, absolute로 띄우고 안보이게 함*/
+  padding: 1px;
 }
 /* .menu-html, .menu-css, .menu-standards{
   left: 0;
@@ -162,6 +163,34 @@ body {
 .sub-menu li{
   display: inline-block;
   padding: 10px;
+}
+/* 문단 앞에 특수기호 넣는것(폰텔로) */
+.sub-menu a::before{  
+  content: '\e805';
+  font-family: 'fontello';
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+}
+/* 마우스를 올리면 실행이 됨 */
+.sub-menu a:hover::before,
+.sub-menu a:focus::before{
+  content: "\e801";
+}
+.sub-menu a {
+  display: inline;
+  padding: 10px 0;
+}
+.sub-menu a:hover,
+.sub-menu a:focus{
+  color: royalblue;
 }
 /* 비주얼 */
 .visual {
