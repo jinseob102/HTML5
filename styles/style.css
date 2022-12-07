@@ -114,6 +114,17 @@ body {
   color: #fff;
   text-shadow: 1px 1px 0 #000;
 }
+/* 마우스로 버튼 위에 올렸을때 */
+.is-active .menu-button{
+  color: #ff0;
+}
+/* "HTML에 대해" 밑줄 / 왜 이렇게 짤까? 고민해보자... */
+.is-active .menu-button::after{
+  content: "";
+  display:block;
+  border-top: 2px solid #000;
+}
+
 .sub-menu {
   background-color: pink;
   position: absolute; 
