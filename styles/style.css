@@ -53,6 +53,7 @@ body {
   position: absolute;
   top: 45px;
   left: 60px;
+  z-index: 10;
 }
 /* 텍스트 링크 모음 */
 .member {
@@ -99,8 +100,24 @@ body {
   border-radius: 0 0 5px 5px;
   padding-left: 230px;
   height: 45px;
+  position: relative;
 }
+.menu-html,
+.ment-css,
+.menu-standard {
+  left: 0;
+}
+.menu-accesibility,
+.menu-qna,
+.menu-archive{
+  right: 0;
+}
+/* .menu li{
+  float: left;
+  border-left: 2px solid #fff;
+} */
 .menu-item {
+  position: relative;
   float: left;
   border-left: 2px solid #fff;
 }
@@ -121,15 +138,30 @@ body {
 /* "HTML에 대해" 밑줄 / 왜 이렇게 짤까? 고민해보자... */
 .is-active .menu-button::after{
   content: "";
-  display:block;
+  display: block;
   border-top: 2px solid #000;
 }
-
 .sub-menu {
   background-color: pink;
   position: absolute; 
+  /* 배치를 하기 위해서 position으로 사용 */ 
   display: none;
   /* 메뉴아이템 정렬을 깔끔하게 하기 위해, absolute로 띄우고 안보이게 함*/
+}
+/* .menu-html, .menu-css, .menu-standards{
+  left: 0;
+}
+.menu-accesibility, .menu-qna, .meno-archive{
+  right: 0;
+} */
+
+.is-active .sub-menu {
+  display: block;
+  white-space: nowrap;
+}
+.sub-menu li{
+  display: inline-block;
+  padding: 10px;
 }
 /* 비주얼 */
 .visual {
