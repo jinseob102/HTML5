@@ -69,10 +69,10 @@ body {
 }
 .member li{
   display: inline;
-  font-size: 16px;
+  font-size: 14px;
 }
 .member a{
-  padding: 6px;
+  padding: 10px;
   display: inherit;
   text-transform: uppercase;
 }
@@ -86,7 +86,7 @@ body {
   margin-right: 4px;
 }
 .navigation{
-  padding-bottom: 40px;
+  padding-bottom: 45px;
 }
 .menu {
   border-top: 2px solid #212121;
@@ -108,7 +108,7 @@ body {
 .menu-standard {
   left: 0;
 }
-.menu-accesibility,
+.menu-accessibility,
 .menu-qna,
 .menu-archive{
   right: 0;
@@ -147,7 +147,7 @@ body {
   /* 배치를 하기 위해서 position으로 사용 */ 
   display: none;
   /* 메뉴아이템 정렬을 깔끔하게 하기 위해, absolute로 띄우고 안보이게 함*/
-  padding: 1px;
+  padding: 4px 0;
 }
 /* .menu-html, .menu-css, .menu-standards{
   left: 0;
@@ -186,7 +186,7 @@ body {
 }
 .sub-menu a {
   display: inline;
-  padding: 10px 0;
+  padding: 6px 0;
 }
 .sub-menu a:hover,
 .sub-menu a:focus{
