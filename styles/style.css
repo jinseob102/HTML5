@@ -32,9 +32,20 @@ a {
 body {
   font-size: 1.4rem;
   color: #222;
-  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 60%, #fff 100%);
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   /* 3. 글자 가져올땐 “해당”, ~, ~, ~, 마지막은 sans-serif; → 해야지 깔끔하게 글자를 처리할 수 있음 */
+  /* background: #ccc;
+  background-image: url("./images/bg_flower.png"),
+                    linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 60%, #fff 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: 50% 0px, 0 0; */
+  /* 배경을 여러개 깔 수 있게 되었다(모던), 모든 요소 다 콤마로 추가할 수 있다. */
+
+  /* 단축방식 */
+  background: url("./images/bg_flower.png") no-repeat 50% 0, 
+  #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 60%, #fff 100%) repeat 0 0;
+  /* 왜? #ccc다음에 그라디언트는 순서와 상관없이 이렇게 배치해야 오류가 나지 않는다. */
+
 }
 
 /* 레이아웃 - 셀렉터 그룹핑 */
@@ -209,18 +220,54 @@ body {
     transform: translate(400px, 75px);
   }
 }
+@keyframes fadeEffect{
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 .visual {
-  background: pink;
+  /* background: pink; */
   height: 120px;
+  position: relative;
+  /* relative가 굳이 필요하진 않지만, 이유가 있다! 1. ? */
+}
+.visual::before,
+.visual::after{
+  /* 가상선택자를 사용하는 이유는? HTML에 굳이 요소를 추가 안하려고! */
+  content:"";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation-name: fadeEffect;
+  animation-duration: 2400ms;
+  animation-iteration-count: infinite; /* 몇번 반복하는지 */
+  animation-direction: alternate; /* 사라졌다가 다시 나왔다가 하는 요소 */
+  /* 배경을 겹치려고 가상선택자로 블록을 만들어 부모요소 크기와 같게 씌우려고 하는것 */
+  /* animation: moveEffect 2400ms infinite alternate; 합쳐서도 쓸 수 있다 */
+}
+.visual::before{
+  background: url(./images/ani_flower_01.png) no-repeat 30% 20px, url(./images/ani_flower_02.png) no-repeat 55% 0px;
+}
+.visual::after{
+  background: url(./images/ani_flower_01.png) no-repeat 95% 0px, url(./images/ani_flower_02.png) no-repeat 5% 30px;
+  animation-delay: 1200ms;
 }
 .visual-text {
   font-family: Georgia, 'Times New Roman', Times, serif;
   animation-name: moveEffect;
-  animation-duration: 2000ms;
+  animation-duration: 800ms;
   animation-timing-function: ease-in-out; /* 움직임 효과 */
   animation-fill-mode: forwards;
-  display: inline-block;
+  /* display: inline-block; */
+  /* position: absolute; */
+  position: relative;
+  z-index: 1;
 }
 /* 메인 */
 .main {
