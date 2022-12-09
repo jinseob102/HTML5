@@ -375,6 +375,39 @@ body {
   text-shadow: 2px 2px 2px #bbb;
 }
 /* 로그인 영역 끝 */
+/* 유효성 검사 */
+.validation-list {
+  margin-top: 25px;
+}
+/* 마진병합(margin collapsing) */
+/* 복습할 구간!!!! */
+.validation-list li {
+  margin-top: 10px;
+}
+/* 도형 모든 영역 링크가 걸리게 하려면, a를 CSS작업해라! */
+.validation-list a{
+  display: block;
+  background: url("./images/validation_icon.png") no-repeat 20px 50%,  
+  linear-gradient(to bottom, #ccc, #eee);
+  /* 내가 못한 부분 1 */
+  padding: 8px 15px 8px 45px;
+  border-radius: 30px;
+  border: 1px solid #aaa;
+}
+/* before도 사용 가능하지만, 배경 넣는 방식으로! */
+/* .validation-list a::before{
+  content: url(./images/validation_icon.png);
+  margin-right: 6px;
+  vertical-align: middle;
+} */
+.validation-list a:hover,
+.validation-list a:focus{
+  color: orangered;
+}
+
+/* 복습할 구간!!!!!!!!!!!!!! */
+/* 유효성 검사 끝 */
+
 .group2 {
   background-color: coral;
   width: 380px;
