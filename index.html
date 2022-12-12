@@ -7,6 +7,7 @@
   <title>웹카페</title>
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/fontello.css">
   <script src="./js/main.js" defer="defer"></script>
 </head>
 <body>
@@ -197,6 +198,7 @@
       <!-- 웹 관련 용어 -->
     </div>
     <div class="group group2">
+      <!-- 자료검색 시작 -->
       <h2 class="a11y-hidden">검색</h2>
       <form method="POST" action="https://formspree.io/jinseob102@gmail.com" class="search-form">
         <fieldset> <!--필드셋에 플렉스를 설정하면 레전드에서 이슈가 있다-->
@@ -210,6 +212,67 @@
           </div>
         </fieldset>
       </form>
+      <!-- 자료검색 끝 -->
+      <!-- 공지사항 자료실 시작-->
+      <div class="board">
+        <ul class="tab-list">
+          <button type="button" class="tab is-select" aria-selected="true" aria-controls="notice" role="tab" id=""noticeButton">공지사항</button>
+          <button type="button" class="tab" aria-selected="false" aria-controls="archive" role="tab" id="archiveButton">자료실</button>
+        </ul>
+        <div class="notice tab-pannel is-select" role="tabpanel" id="notice" aria-labelledby="noticeButton">
+          <ul class="board-list">
+            <li>
+              <a class="icon-stop" href="/">HTML의 모든 것을 알려주마 샘플 활용법</a>
+              <time datetime="2022-12-12T13:53:45">2022.12.12</time>
+            </li>
+            <li>
+              <a class="icon-stop" href="/">W3C 사이트 리뉴얼 및 공지사항</a>
+              <time datetime="2022-12-12T13:53:45">2022.12.12</time>
+            </li>
+            <li>
+              <a class="icon-stop" href="/">KWCAG 2.1 소식</a>
+              <time datetime="2022-12-12T13:53:45">2022.12.12</time>
+            </li>
+            <li>
+              <a class="icon-stop" href="/">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+              <time datetime="2022-12-12T13:53:45">2022.12.12</time>
+            </li>
+            <li>
+              <a class="icon-stop" href="/">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
+              <time datetime="2022-12-12T13:53:45">2022.12.12</time>
+            </li>
+          </ul>
+          <a href="/" class="board-more icon-plus" aria-labelledby="noticeButton">더보기</a>
+        </div>
+
+        <div class="archive tab-pannel" role="tabpanel" id="archive" aria-labelledby="archiveButton">
+          <ul class="board-list">
+            <li>
+              <a class="icon-stop" href="/">HTML의 모든 것을 알려주마 샘플 활용법</a>
+              <time datetime="2022-12-21T13:53:45">2022.12.12</time>
+            </li>
+            <li>
+              <a class="icon-stop" href="/">W3C 사이트 리뉴얼 및 공지사항</a>
+              <time datetime="2022-12-21T13:53:45">2022.12.21</time>
+            </li>
+            <li>
+              <a class="icon-stop" href="/">KWCAG 2.1 소식</a>
+              <time datetime="2022-12-21T13:53:45">2022.12.21</time>
+            </li>
+            <li>
+              <a class="icon-stop" href="/">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+              <time datetime="2022-12-21T13:53:45">2022.12.21</time>
+            </li>
+            <li>
+              <a class="icon-stop" href="/">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
+              <time datetime="2022-12-21T13:53:45">2022.12.21</time>
+            </li>
+          </ul>
+          <a href="/" class="board-more icon-plus" aria-labelledby="archiveButton">더보기</a>
+        </div>
+        
+      </div>
+      <!-- 게시판 등 끝-->
     </div>
     <div class="group group3">그룹3</div>
   </main>
