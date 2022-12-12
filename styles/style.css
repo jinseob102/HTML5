@@ -297,6 +297,15 @@ body {
 .group1 {
   width: 250px;
 }
+.group2 {
+  width: 380px;
+}
+.group3 {
+  width: 190px;
+}
+.clearfix {
+  clear: both;
+}
 /* 로그인 영역 - 221209 수업! */
 .login{
   box-shadow: 5px 5px 0 0 #ccc;
@@ -459,7 +468,7 @@ body {
 }
 .search-form-inner{
   display: flex;
-  flex-flow: row nowarp;
+  flex-flow: row nowrap;
 }
 .form-group {
   flex-grow: 1;
@@ -473,17 +482,12 @@ body {
   margin-right: 10px;
   flex-shrink: 0; /* 플렉스에서 줄바뀜이 안되도록 하는 명령어 */ 
 }
-.form-group-label::before{
-  content:"\e803";
-  font-family: "fontello";
-  margin-right: 5px;
-}
 .form-group-input {
   border: 1px solid #aaa;
   border-radius: 3px;
   height: 24px;
   flex-grow: 1;
-  width: 100%; /* 크로싱 이슈 해결방안 */
+  width: 100%; /* 크로스 이슈 해결방안 */
 }
 .search-button {
   background-color: #000;
@@ -494,16 +498,6 @@ body {
   font-size: 1.2rem;
   flex-shrink: 0;
 }
-
-.group2 {
-  width: 380px;
-}
-.group3 {
-  width: 190px;
-}
-.clearfix {
-  clear: both;
-}
 /* 공지사항, 자료실 */
 .board {
   margin-top: 20px;
@@ -511,7 +505,7 @@ body {
 }
 .tab-list {
   display: flex; /* 플렉스를 사용하면 "버튼 사이"의 공백이 사라진다 */
-  flex-flow:  row nowrap;
+  flex-flow: row nowrap;
 }
 .tab{
   border: 1px solid #aaa;
@@ -558,7 +552,6 @@ body {
   top: 0px;
   padding: 8px;
 }
-
 .icon-plus::before{ /* 꼭 before로 접근해서 바꿔야 아이콘 색이 바뀐다. */
   color: darkgreen;
 }
