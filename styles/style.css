@@ -421,33 +421,37 @@ body {
 }
 .term-list {
   margin-top: 10px;
-  background-color: yellow;
 }
 .term-list div {
   margin-top: 10px;
-  background: pink;
   display: flow-root; /* 자식요소에게 각 개별 공간을 만들어주는 것! */
 }
-.term-list-subject {
-  background: lime;
+.term-list-subject, .term-list-brief {
   float: right;
   width: 140px;
+}
+.term-list-subject {
   color: rgb(10, 71, 132);
-  font-weight: 600;
+  font-weight: 500;
 }
 .term-list-thumbnail {
-  background: purple;
   float: left;
 }
 .term-list-thumbnail img {
   vertical-align: middle; /* 이미지 아래 살짝나온 갭을 없애기 위해 배치하는 것 */
 }
 .term-list-brief {
-  background: coral;
-  float: right;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+.cross .term-list-subject,
+.cross .term-list-brief {
+  float: left;
   width: 140px;
 }
-
+.cross .term-list-thumbnail {
+  float: right;
+}
 .group2 {
   background-color: coral;
   width: 380px;
