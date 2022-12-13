@@ -621,22 +621,17 @@ body {
   display: inline-block;
 }
 
-.event h2,
-.related-title {
-  font-weight: 600;
-}
-
 .event-button-wrapper {
   height: 19px;
   overflow: hidden;
   display: flex;
   flex-flow: row nowrap;
-  align-content: center;
+  align-items: center;
   gap: 10px;
   float: right;
 }
 
-.event-button { /* IR기법(image replacement */
+.event-button { /* IR기법(image replacement) */
   width: 19px;
   height: 100%;
   border: 0;
