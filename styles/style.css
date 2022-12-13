@@ -2,6 +2,8 @@
 @import url(./normalize.css);  /* 노멀라이즈는 가장 먼저 선언해야함 */
 @import url(./reset.css); /* 이 순서를 유지야함 */
 @import url(./fonts.css);
+@import url(./module.css);
+
 /* 숨긴 콘텐츠 */
 .a11y-hidden, legend {
   background-color: yellow;
@@ -570,7 +572,6 @@ body {
   background: #aaa linear-gradient(to right, #ccc 0%, #ccc 70%, #fff);
 }
 .news-title {
-  color:#e85e2c;
   font-size: 1.5em;
   font-weight: 700;
   
@@ -611,7 +612,90 @@ body {
   padding: 5px;
 }
 
+/* 신규 이벤트 및 관련 사이트 */
 
+.event {
+  border-bottom: 1px solid #ccc;
+}
+.event-title {
+  display: inline-block;
+}
+
+.event h2,
+.related-title {
+  font-weight: 600;
+}
+
+.event-button-wrapper {
+  height: 19px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  gap: 10px;
+  float: right;
+}
+
+.event-button { /* IR기법(image replacement */
+  width: 19px;
+  height: 100%;
+  border: 0;
+  padding: 18px 0 0 0; /* 패딩 트릭: 패딩을 줘서 글자를 밖으로 보내라? */
+  /* 이부분은 잘 복습해라! */
+  background: url(./images/back_forward.png) no-repeat;
+}
+
+.event-button-next {
+  background-position: -36px 0;
+}
+
+.event-thumbnail, 
+.event-brief {
+  margin: 10px 0;
+}
+
+.event-thumbnail img{
+  box-shadow: 5px 5px #888;
+}
+
+.event-brief {
+  line-height: 1.5;
+}
+
+.related {
+  margin-top: 10px;
+  line-height: 1.5em;
+}
+
+.related-list {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  height: 27px;
+  overflow: hidden;
+  transition: height 400ms 0ms, padding 200ms 400ms;
+}
+
+.related-list li {
+  height: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 10px;
+  margin: 1px;
+}
+
+.related-list a {
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+.related-list:hover,
+.related-list:focus {
+  height: 135px;
+  padding: 10px 0;
+}
 
 
 /* 슬로건 */
