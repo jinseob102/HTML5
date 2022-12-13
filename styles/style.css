@@ -619,6 +619,7 @@ body {
 }
 .event-title {
   display: inline-block;
+  font-weight: 600;
 }
 
 .event-button-wrapper {
@@ -627,8 +628,9 @@ body {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   float: right;
+  padding-right: 5px;
 }
 
 .event-button { /* IR기법(image replacement) */
@@ -641,7 +643,7 @@ body {
 }
 
 .event-button-next {
-  background-position: -36px 0;
+  background-position: -36px 0; /* X축 Y축 */
 }
 
 .event-thumbnail, 
@@ -660,9 +662,11 @@ body {
 .related {
   margin-top: 10px;
   line-height: 1.5em;
+  font-weight: 600;
 }
 
 .related-list {
+  font-weight: normal;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
