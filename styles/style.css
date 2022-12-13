@@ -555,6 +555,65 @@ body {
 .icon-plus::before{ /* 꼭 before로 접근해서 바꿔야 아이콘 색이 바뀐다. */
   color: darkgreen;
 }
+/* 새소식 */
+.news {
+  margin-top: 20px;
+  position: relative;
+}
+.news::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: #aaa linear-gradient(to right, #ccc 0%, #ccc 70%, #fff);
+}
+.news-title {
+  color:#e85e2c;
+  font-size: 1.5em;
+  font-weight: 700;
+  
+}
+.news-link {
+  display: block;
+}
+.news-item {
+  margin-top: 25px;
+  padding-left: 130px;
+  position: relative;
+}
+.news-item-title {
+  font-weight: 700;
+}
+.news-item-date {
+  font-weight: 700;
+  display: block;
+  margin: 5px 0 10px;
+}
+.news-item-brief {
+  line-height: 1.5;
+}
+.news-item-thumbnail {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  text-align: center;
+}
+.news-item-thumbnail img{
+  box-shadow: 0 15px 25px 5px #ccc;
+  margin-bottom: 15px;
+}
+.news-more {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+}
+
+
+
+
 /* 슬로건 */
 .slogan {
   background: skyblue;
