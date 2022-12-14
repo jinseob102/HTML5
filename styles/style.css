@@ -1,114 +1,151 @@
-
-@import url(./normalize.css);  /* 노멀라이즈는 가장 먼저 선언해야함 */
-@import url(./reset.css);  /* 이 순서를 유지야함 */
+@import url(./normalize.css);
+@import url(./reset.css);
 @import url(./fontello.css);
 
 /* 기본 스타일 */
 *,
-* ::before,
-* ::after{
-  box-sizing: border-box; 
-}
-/* 본문 스타일 */
-body {
-  background: purple;
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font-weight: 100; 
-  /* 3. 글자 가져올땐 “해당”, ~, ~, ~, 마지막은 sans-serif; → 해야지 깔끔하게 글자를 처리할 수 있음 */
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/* 레이아웃 - 셀렉터 그룹핑 */
-.header, .visual, .main, .slogan, .footer-inner {
+html {
+  font-size: 14px;
+}
+
+/* 링크 스타일 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 본문 스타일 */
+body {
+  font-size: 1.3rem;
+  color: #212121;
+  background: #ccc;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/* 레이아웃 */
+.header,
+.visual,
+.main,
+.slogan,
+.footer-inner {
   width: 940px;
   margin: 0 auto;
 }
+
 /* 헤더 */
 .header {
   background: #fff;
-  padding: 0 30px; /* padding: 위/아래 좌/우 */
-  height: 15vh;
+  padding: 0 30px;
   border-radius: 0 0 15px 15px;
 }
-/* 멤버 */
+
 .member {
   background-color: pink;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
 }
-/*
-.member li:nth-child(n+2)::before {
-  background-color: skyblue;
-  content: ":";
-}*/
 
 /* 비주얼 */
 .visual {
-  background: orange;
-  height: 10vh;
+  height: 120px;
 }
 /* 메인 */
 .main {
-  background: lightgreen;
+  background: #fff;
   min-height: 450px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items:flex-start;
-  padding: 30px;
-  /* flow-root:  */
-  /* overflow: hidden; */
-  /* overflow: 자식내용이 넘처흐르는 현상, hidden: 넘친것을 안보이게 하는 명령어, auto: 네이게이션바 생성 */
-  /* BFC이란?? 레이아웃 안에 미니 레이아읏을 말한다. BCF로 명시하는 것은 높이를 부여하는 것 */
+  display: flow-root;
 }
 
-
-/* before, after 선택자: 백그라운드 이미지임 -> 홈페이지에서 cmd+A눌러도 선택이 안된다!
-
-.main::before {
-  content: "첫번째 자식 요소 입니다."; 
-  color: white;
-}
-.main::after {
-  content: "마지막 자식 요소 입니다.";
-  color: white;
-}*/
 .group {
+  float: left;
+}
 
-}
 .group1 {
-  background-color: violet;  
   width: 250px;
-  flex-shrink: 2;
-  
 }
+
 .group2 {
-  background-color: coral;
   width: 380px;
 }
 .group3 {
-  background-color: gold;
   width: 190px;
 }
-.clearfix {
-  clear: both;
+
+/* 신규이벤트 및 관련 사이트 */
+.gradient-effect {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  background: linear-gradient(to bottom, #ccc, #fff);
 }
+
+.text-xl {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.accent-color {
+  color: brown;
+}
+
+.margin-top-default {      /* 항상 등장하는 규칙이라서 */
+  margin-top: 20px;
+}
+
+.event {
+
+  border-bottom: 1px solid #ccc;
+}
+
+.event-button-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+#eventDetail {
+
+}
+
+.event-button {
+  width: 19px;
+  border: 0;
+  height: 18px;
+  padding: 0;
+  text-indent: -9999px; /* 들여쓰기 효과로 버튼 바깥으로 보내버리는 것 */
+  background: aqua url(./images/back_forward.png) no-repeat;
+}
+
+.event-button-next {
+  background-position: 100% 0;
+}
+
+.event-thumbnail,
+.event-brief {
+  margin: 10px 0;
+}
+
+.event-thumbnail img {
+  border: 1px solid #eee;
+  box-shadow: 5px 5px 0 0 #ccc;
+}
+
 /* 슬로건 */
 .slogan {
   background: skyblue;
-  height: 10vh;
   clear: both;
 }
 /* 푸터 */
 .footer {
   background: gray;
-  width: 940px;
-  margin: 0 auto;
 }
 .footer-inner {
-  background: lightgray;
-  height: 15vh;
-  position: relative;
-  top: -10px;
-  left: -10px;
+  background: silver;
 }
