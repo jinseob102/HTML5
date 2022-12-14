@@ -113,13 +113,13 @@ body {
 }
 
 #eventDetail {
-
+  line-height: 1.4;
 }
 
 .event-button {
   width: 19px;
   border: 0;
-  height: 18px;
+  height: 19px;
   padding: 0;
   /* text-indent: -9999px; 들여쓰기 효과로 버튼 바깥으로 보내버리는 것 */
   background: aqua url(./images/back_forward.png) no-repeat;
